@@ -177,17 +177,17 @@
 		},
 
 		_renderCheckBox: function() {
-			$(this.element).find('.weather__checkbox').attr('src', `img/dialog_checkbox${this.settings.fixLocation ? '_selected' : ''}.png`);
+			$(this.element).find('.weather__checkbox').attr('src', `dialog_checkbox${this.settings.fixLocation ? '_selected' : ''}.png`);
 		},
 
 		_render: function(obj) {
 			var element = $(this.element);
 			if (obj) {
 				var template = `<div class="weather__widget">
-				<img class="weather__checkbox" title="Fix this city" src="img/dialog_checkbox${this.settings.fixLocation ? '_selected' : ''}.png">
+				<img class="weather__checkbox" title="Fix this city" src="dialog_checkbox${this.settings.fixLocation ? '_selected' : ''}.png">
 				<span class="weather__name-city" title="Click to select another city">${obj.name}, ${obj.country}</span><br>
 				<div class="weather__wrapper">
-				<img class="weather__img" title="${obj.description}" src="img/${this._icons[obj.icon]}.png"><br>
+				<img class="weather__img" title="${obj.description}" src="${this._icons[obj.icon]}.png"><br>
 				<div class="weather__text__wrapper">
 				<span class="weather__main-temp">${obj.tempCur}&deg;${this.settings.tempUnit}</span><br>
 				${this.settings.displayDescription ? `<span class="weather__description">${obj.description}</span><br>` : ''}
@@ -199,7 +199,7 @@
 				</div>`;
 				element.html($(template));
 				element.find('.weather__widget')
-				.css(`background`, `url("img/${obj.icon}.jpg")`)
+				.css(`background`, `url("${obj.icon}.jpg")`)
 				.css('background-size', '100%');
 			}
 			else {
