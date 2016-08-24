@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Display browser Notification from Web Application Demo</title>
+<script type="text/javascript">
+
+var articles = [
+["Vanilla JS Browser Default Java Script.","http://www.9lessons.info/2015/09/vanilla-js-browser-default-java-script.html"],
+["Facebook Style Background Image Upload and Position Adjustment.","http://www.9lessons.info/2015/02/facebook-style-background-image-upload.html"],
+["Create a RESTful services using Slim PHP Framework","http://www.9lessons.info/2014/12/create-restful-services-using-slim-php.html"],
+["Social Network Script","http://www.thewallscript.com"],
+["9lesosns Demos","http://demos.9lessons.info"],
+["Pagination with Jquery, PHP , Ajax and MySQL.","http://www.9lessons.info/2010/10/pagination-with-jquery-php-ajax-and.html"],
+["Ajax Select and Upload Multiple Images with Jquery","http://www.9lessons.info/2013/09/multiple-ajax-image-upload-jquery.html"],
+["Ajax PHP Login Page with Shake Animation Effect.","http://www.9lessons.info/2014/07/ajax-php-login-page.html"],
+["Login with Google Account.","http://www.9lessons.info/2011/07/login-with-google-account.html"],
+["Login with Facebook and Twitter","http://www.9lessons.info/2011/02/login-with-facebook-and-twitter.html"]
+];
+
+
+setTimeout(function(){ 
+var x = Math.floor((Math.random() * 10) + 1);
+var title=articles[x][0];
+var desc='Most popular article.';
+var url=articles[x][1];
+notifyBrowser(title,desc,url);
+}, 200000);
+
+
+
+document.addEventListener('DOMContentLoaded', function () 
+{
+
+if (Notification.permission !== "granted")
+{
+Notification.requestPermission();
+}
+
+document.querySelector("#notificationButton").addEventListener("click", function(e)
+{
+var x = Math.floor((Math.random() * 10) + 1);
+var title=articles[x][0];
+var desc='Most popular article.';
+var url=articles[x][1];
+notifyBrowser(title,desc,url);
+e.preventDefault();
+});
+
+});
+
+function notifyBrowser(title,desc,url) 
+{
+if (!Notification) {
+console.log('Desktop notifications not available in your browser..'); 
+return;
+}
+if (Notification.permission !== "granted")
+{
+Notification.requestPermission();
+}
+else {
+var notification = new Notification(title, {
+icon:'https://lh3.googleusercontent.com/-aCFiK4baXX4/VjmGJojsQ_I/AAAAAAAANJg/h-sLVX1M5zA/s48-Ic42/eggsmall.png',
+body: desc,
+});
+
+// Remove the notification from Notification Center when clicked.
+notification.onclick = function () {
+window.open(url);      
+};
+
+// Callback function when the notification is closed.
+notification.onclose = function () {
+console.log('Notification closed');
+};
+
+}
+}
+
+
+</script>
+
+
+
+<style type="text/css">
+.hover{background-color: #cc0000}
+ #container{ margin:0px auto; width: 800px} 
+.button {
+ font-weight: bold;
+    padding: 7px 9px;
+    background-color: #5fcf80;
+    color: #fff !important;
+    font-size: 12px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.15);
+    border-width: 1px 1px 3px !important;
+    border-style: solid;
+    border-color: #3ac162;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+}
+.authorBlock{border-top:1px solid #cc0000;}
+</style>
+</head>
+<body>
+<div id="container">
+<h1>Display browser Notification from Web Application Demo</h1>  
+<div height="125px" >
+       <script type="text/javascript"><!--
+       google_ad_client = "pub-6904774409601870";
+       /* 728x90, created 2/8/10 */
+       google_ad_slot = "4242245788";
+       google_ad_width = 728;
+       google_ad_height = 90;
+       //-->
+       </script>
+       <script type="text/javascript"
+       src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+       </script>
+       <br/><br/>
+       </div>
+<h4>Click notification button</h4>
+<br/><br/><br/>
+<a href="#"  id="notificationButton" class="button">Notification</a>
+
+<div style="float:right">
+   <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-6904774409601870";
+        /* 9lessons_main_s_Blog1_336x280_as */
+        google_ad_slot = "5289887236";
+        google_ad_width = 336;
+        google_ad_height = 280;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+        <br/> <br/> 
+
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10999810-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=3967696; 
+var sc_invisible=1; 
+var sc_partition=46; 
+var sc_click_stat=1; 
+var sc_security="6979b175"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="free hit counter"
+href="http://www.statcounter.com/free_hit_counter.html"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/3967696/0/6979b175/0/"
+alt="free hit counter" ></a></div></noscript>
+</body>
+</html>
