@@ -1,0 +1,76 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chat</title>
+	
+	<script src="jquery-2.0.3.min.js"></script>
+	<script src="bullet.js"></script>
+	<script src="echat.js"></script>
+	<script src="moment.min.js"></script>
+	<script src="interface.js"></script>
+	
+	<link href="style.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+	
+<!-- absolute -->
+
+<div class="overlay" id="setup">
+
+	<div class="box" id="connecting">
+		<p>Connecting ...</p>
+	</div>
+	
+	<div class="box" id="register" style="display: none;">
+		<input id="username" name="username" type="text" placeholder="Username">
+		<div class="button-wrapper">
+			<p class="message"></p>
+			<button class="submit">Submit</button>
+		</div>
+	</div>
+
+</div>
+
+<!-- end absolute -->
+
+<div id="wrapper">
+	
+	<div id="rooms">
+		
+		<ul class="rooms">
+		</ul>
+		
+		<div id="join">
+			<input id="room-name" name="room-name" type="text" placeholder="Join Room">
+		</div>
+		
+	</div>
+	
+	<div id="messages">
+		
+		<div class="scroll-wrapper">
+		
+			<button id="load">Load older</button>
+			
+			<div class="rooms">
+			</div>
+			
+		</div>
+		
+		<div id="send">
+			<div class="input-wrapper">
+				<input id="new-message" name="content" type="text" placeholder="Message">
+			</div>
+			<button class="submit">Send</button>
+		</div>
+		
+	</div>
+	
+	<div id="users">
+	</div>
+	
+</div>
+	
+</body>
+</html>
